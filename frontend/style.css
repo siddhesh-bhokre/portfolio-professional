@@ -1,0 +1,561 @@
+:root {
+    --bg: #0d1117;
+    --fg: #c9d1d9;
+    --primary: #58a6ff;
+    --accent: #238636;
+    --card-bg: #161b22;
+  }
+
+  .light-theme {
+    --bg: #ffffff;
+    --fg: #0d1117;
+    --primary: #007aff;
+    --accent: #28a745;
+    --card-bg: #f3f4f6;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    transition: background 0.5s, color 0.5s;
+    line-height: 1.6;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--card-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav div {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--fg);
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--primary);
+  }
+
+  nav a:active {
+    color: var(--accent);
+  }
+
+  .m-t {
+    padding-top: 4rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 4rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .hero img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .links a {
+    margin: 0 1rem;
+    font-size: 2.5rem;
+    color: var(--primary);
+  }
+
+  /* Skills Section */
+  #skills .grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); 
+    gap: 1rem;
+  }
+
+  #skills .card {
+    padding: 1.2rem; 
+    min-height: 120px; 
+    text-align: center;
+  }
+
+  #skills .card i {
+    font-size: 2.5rem; 
+  }
+
+  #skills .card p {
+    font-size: 1rem; 
+  }
+
+
+  #projects .grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    ); 
+    gap: 1.2rem;
+  }
+
+  #projects .card {
+    background: var(--card-bg);
+    padding: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #projects .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  #projects .card h3 {
+    font-size: 1.3rem; 
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--fg);
+  }
+
+  #projects .card p {
+    font-size: 1rem;
+    color: var(--fg);
+    font-weight: 400;
+    margin-bottom: 1.2rem; 
+  }
+
+  #projects .project-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  #projects .btn {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    border-radius: 30px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: #fff;
+    font-size: 0.85rem; 
+    text-align: center;
+  }
+
+  .github-btn {
+    background-color: #333;
+  }
+
+  .github-btn:hover {
+    background-color: #444;
+    transform: scale(1.05);
+  }
+
+  .demo-btn {
+    background-color: #58a6ff;
+  }
+
+  .demo-btn:hover {
+    background-color: #4f9bff;
+    transform: scale(1.05);
+  }
+  /* Education Section */
+  #education {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  #education h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--fg);
+  }
+
+  .education-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .education-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+  }
+
+  .education-details {
+    text-align: left;
+  }
+
+  .education-details p {
+    font-size: 1rem;
+    color: var(--fg);
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+
+  .education-details strong {
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
+
+  section {
+    max-width: 900px;
+    margin: auto;
+    padding: 4rem 2rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  .card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+
+  .card p {
+    font-size: 1.2rem;
+    color: var(--fg);
+    font-weight: 600;
+  }
+  #contact {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    color: var(--fg);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input,
+  form textarea {
+    padding: 0.8rem 1.1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--bg);
+    color: var(--fg);
+    box-shadow: inset 0 0 0 1px var(--primary);
+    transition: 0.3s ease;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--accent);
+  }
+  
+  form textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  form button {
+    background: var(--primary);
+    color: var(--bg);
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  form button:hover {
+    background: var(--accent);
+    transform: scale(1.03);
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #888;
+    background: var(--card-bg);
+  }
+
+  .theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: var(--bg);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      padding: 1rem;
+    }
+
+    section {
+      padding: 5.3rem 2rem;
+    }
+
+    nav div {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .card {
+      padding: 1.5rem;
+      min-height: 160px;
+    }
+
+    .card i {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+    #contact {
+      padding: 2.5rem 1.5rem;
+    }
+  
+    #contact h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  
+    form {
+      padding: 1.5rem;
+      max-width: 90%;
+    }
+  
+    form input,
+    form textarea {
+      padding: 0.75rem 1rem;
+    }
+  
+    form button {
+      padding: 0.7rem 1.2rem;
+    }       
+
+    footer {
+      padding: 1rem;
+    }
+
+    .theme-toggle {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+    #projects .grid {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      ); 
+    }
+
+    #projects .card {
+      padding: 1rem; 
+      min-height: 180px; 
+    }
+
+    #projects .card h3 {
+      font-size: 1.2rem;
+    }
+
+    #projects .card p {
+      font-size: 0.9rem;
+    }
+
+    #projects .btn {
+      padding: 0.6rem 1.1rem;
+      font-size: 0.8rem;
+    }
+    .education-card {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+
+    .education-logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .education-details {
+      text-align: center;
+    }
+
+    .education-details p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 0.9rem;
+    }
+    #contact h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+  
+    form {
+      padding: 1.2rem;
+      max-width: 90%;
+    }
+  
+    form input,
+    form textarea {
+      padding: 0.7rem 1rem;
+    }
+  
+    form button {
+      padding: 0.7rem 1rem;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      padding: 1.2rem;
+      min-height: 140px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    footer {
+      padding: 0.8rem;
+    }
+
+    .theme-toggle {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+    }
+  }
