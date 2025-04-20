@@ -12,7 +12,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         const email = document.querySelector("#email").value;
         const message = document.querySelector("#message").value;
       
-        const response = await fetch("https://your-backend.onrender.com/api/contact", {
+        const response = await fetch("https://jocular-pastelito-827859.netlify.app/api/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
